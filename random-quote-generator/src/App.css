@@ -1,38 +1,139 @@
-.App {
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: #F8F5E9;
+}
+.quote-container{
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+}
+.quote-background{
+  width: 100%;
+  height: 100%;
+  background-color: #800020;
+  transform: skew(-20deg);
+  display: flex;
+  align-items: center;
+}
+.quote{
+  width: 90%;
+  transform: skew(20deg);
+  color: white;
+  font-family:'EB Garamond',serif;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quote-sign{
+  color: #800020;
+  font-size: 100px;
+  font-family: 'Courgette', cursive;
+}
+.start-quote{
+  position: absolute;
+  top: -50%;
+  left:-10%;
+}
+.end-quote{
+  position: absolute;
+  top: -50%;
+  right: -23%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.guess-button{
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  background-color: #EADABB;
+  border-radius: 20px;
+  border: none;
+  font-size: 30px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.1s,box-shadow 0.1s;
+}
+.guess-button:hover{
+  transform: translate(-50%,-5%);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.436);
+}
+.guess-button:active{
+  transform: translate(-50%,5%);
+}
+.guesser-container{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #e8e3c9;
+  box-shadow: 0 0 500px 500px rgba(0, 0, 0, 0.621);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 15% 30% 30%;
+  row-gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.deactive{
+  display: grid;
+}
+.deactive{
+  display: none;
+}
+
+@keyframes slideupAnimation{
+  from{
+    transform: translate(-50%,100%);
+    box-shadow: 0 0 500px 500px rgba(0, 0, 0, 0);
+  }
+  to{
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 500px 500px rgba(0, 0, 0, 0.621);
   }
 }
+.slideup{
+  animation: slideupAnimation 1s ease-in-out none;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.guess-prompt{
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+.guess-input{
+  height: 35%;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;  
+  align-self: center;
+  font-size: 18px;
+}
+.submit{
+  height: 40%;
+  width: 40%;
+  border-radius: 20px;
+  background-color: #800020;
   color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15%;
+  place-self: center;
+  transition: transform 0.1s;
 }
-
-.App-link {
-  color: #61dafb;
+.submit:hover{
+  transform: translate(0,-5%);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit:active{
+  transform: translate(0,5%);
+  opacity: 0.5;
 }
