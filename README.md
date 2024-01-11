@@ -46,3 +46,7 @@ Start the server
   npm run start
 ```
 
+
+## Screenshots
+
+![Game Screenshot](https://s6.uupload.ir/files/screenshot_(134)_g6ie.png)
