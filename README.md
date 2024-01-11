@@ -1,3 +1,5 @@
+# Random Quote Generator
+
 This is a React based website that gives you a random quote each time you refresh. It also contains an AI reader.
 
 
